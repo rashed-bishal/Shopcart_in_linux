@@ -51,12 +51,39 @@ $(document).ready(function(){
 
     $('.distinct').on('change','#selectMobileBrand',function (){
 
+        var csrfVar = $('meta[name="csrf-token"]').attr('content');
+
 
         $('.form-title').html('<h4>Upload a '+$(this).find('option:selected').text()+' product</h4>');
 
-        // $('.form-body > form').html();
-        //
-        // $('.form-body > form').append('@csrf');
+        $('.form-body > form').html('<input name="_token" value="'+csrfVar+'" type="hidden">' +
+            '<table class="table table-striped createForm">\n' +
+            '                                <tbody>\n' +
+            '                                <tr class="form-group">\n' +
+            '                                        <td><label for="name">Name</label></td>\n' +
+            '                                        <td><input type="text" class="form-control" name="model_name"></td>\n' +
+            '                                    </tr>\n' +
+            '                                <tr class="form-group">\n' +
+            '                                        <td><label for="name">Name</label></td>\n' +
+            '                                        <td><input type="text" class="form-control" name="model_number"></td>\n' +
+            '                                    </tr>\n' +
+            '                                <tr class="form-group">\n' +
+            '                                        <td><label for="name">Name</label></td>\n' +
+            '                                        <td><input type="text" class="form-control" name="price"></td>\n' +
+            '                                    </tr>\n' +
+            '                                <tr class="form-group">\n' +
+            '                                        <td><label for="name">Name</label></td>\n' +
+            '                                        <td><input type="text" class="form-control" name="model_name"></td>\n' +
+            '                                    </tr>\n' +
+            '                                <tr class="form-group">\n' +
+            '                                        <td></td>\n' +
+            '                                        <td><input type="submit" class="btn btn-dark" name="submit"></td>\n' +
+            '                                    </tr>\n' +
+            '\n' +
+            '                               </tbody>\n' +
+            '            </table>');
+
+        $('.form-body > form').append('{{csrf_field()}}');
 
 
 

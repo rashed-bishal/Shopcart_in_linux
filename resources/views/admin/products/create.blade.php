@@ -52,32 +52,6 @@
 
     <div class="container form-body"><br>
         <form action="{{route('mobile.store')}}" method="post" class="col-sm-10 offset-sm-1">
-            @csrf
-            <table class="table table-striped createForm">
-                                <tbody>
-                                <tr class="form-group">
-                                        <td><label for="name">Name</label></td>
-                                        <td><input type="text" class="form-control" name="model_name"></td>
-                                    </tr>
-                                <tr class="form-group">
-                                        <td><label for="name">Name</label></td>
-                                        <td><input type="text" class="form-control" name="model_number"></td>
-                                    </tr>
-                                <tr class="form-group">
-                                        <td><label for="name">Name</label></td>
-                                        <td><input type="text" class="form-control" name="price"></td>
-                                    </tr>
-                                <tr class="form-group">
-                                        <td><label for="name">Name</label></td>
-                                        <td><input type="text" class="form-control" name="model_name"></td>
-                                    </tr>
-                                <tr class="form-group">
-                                        <td></td>
-                                        <td><input type="submit" class="btn btn-dark" name="submit"></td>
-                                    </tr>
-
-                               </tbody>
-                            </table>'
 
         </form>
     </div>
